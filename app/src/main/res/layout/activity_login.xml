@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp"
+
+    tools:context=".LoginActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="Login"
+        android:textSize="35sp"
+        android:textColor="@color/purple_500"
+        android:gravity="center_horizontal" />
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/Googleidbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/RecoverPasswordTxt"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:id="@+id/EmailTextInputLay"
+        >
+        <EditText
+            android:id="@+id/EmailEdit2"
+
+            android:inputType="textEmailAddress"
+            android:hint="Email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </EditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_below="@id/EmailTextInputLay"
+        android:id="@+id/PasswordTextInputLay"
+        app:passwordToggleEnabled="true"
+        >
+        <EditText
+            android:id="@+id/PasswordEdit2"
+            android:inputType="textPassword"
+            android:hint="Password"
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content">
+
+        </EditText>
+    </com.google.android.material.textfield.TextInputLayout>
+    <Button
+        android:id="@+id/LogintnNow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_below="@id/PasswordTextInputLay"
+        android:layout_centerHorizontal="true">
+
+    </Button>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:id="@+id/RecoverPasswordTxt"
+        android:text="Forget Password? Recover"
+        android:layout_below="@id/LogintnNow"
+        android:textColor="@color/black"
+        android:gravity="center_horizontal" />
+
+
+    <TextView
+        android:id="@+id/HavenotRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/LogintnNow"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="64dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_horizontal"
+        android:text="Haven't Registered? REGISTER"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+
+
+</RelativeLayout>

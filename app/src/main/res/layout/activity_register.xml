@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp"
+    tools:context=".RegisterActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+         android:text="Register"
+        android:textSize="35sp"
+        android:textColor="@color/purple_500"
+        android:gravity="center_horizontal" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:id="@+id/EmailTextInputLay"
+        >
+        <EditText
+            android:id="@+id/EmailEdit"
+            android:inputType="textEmailAddress"
+            android:hint="Email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </EditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_below="@id/EmailTextInputLay"
+        android:id="@+id/PasswordTextInputLay"
+        app:passwordToggleEnabled="true"
+        >
+        <EditText
+            android:id="@+id/PasswordEdit"
+            android:inputType="textPassword"
+            android:hint="Password"
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content">
+
+        </EditText>
+    </com.google.android.material.textfield.TextInputLayout>
+    <Button
+        android:id="@+id/RegisterbtnNow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_below="@id/PasswordTextInputLay"
+        android:layout_centerHorizontal="true">
+
+    </Button>
+
+    <TextView
+        android:id="@+id/HaveRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Already Registered? LOGIN"
+        android:textAlignment="center"
+        android:layout_below="@id/RegisterbtnNow"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        />
+
+
+
+</RelativeLayout>
